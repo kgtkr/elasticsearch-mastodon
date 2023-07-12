@@ -1,5 +1,5 @@
 {
-  "systemDict": "/etc/elasticsearch/system_full.dic",
+  "systemDict": "/usr/share/elasticsearch/config/sudachi/system_full.dic",
   "userDict": [],
   "inputTextPlugin": [
     {

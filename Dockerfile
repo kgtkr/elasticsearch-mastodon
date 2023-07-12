@@ -8,5 +8,6 @@ FROM elasticsearch:8.6.0
 
 RUN elasticsearch-plugin install https://github.com/WorksApplications/elasticsearch-sudachi/releases/download/v3.0.0/analysis-sudachi-8.6.0-3.0.0.zip
 
-COPY --chown=root:elasticsearch --from=sudachi /opt/system_full.dic /etc/elasticsearch/system_full.dic
+RUN mkdir -p /usr/share/elasticsearch/config/sudachi/
+COPY --chown=root:elasticsearch --from=sudachi /opt/system_full.dic /usr/share/elasticsearch/config/sudachi/
 COPY --chown=root:elasticsearch sudachi.json /etc/elasticsearch/
