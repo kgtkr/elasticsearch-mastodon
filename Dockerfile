@@ -8,7 +8,7 @@ RUN git clone https://github.com/WorksApplications/Sudachi.git /opt/Sudachi && \
     cd /opt/Sudachi && git checkout v0.7.3
 
 
-FROM elasticsearch:7.10.2
+FROM docker.elastic.co/elasticsearch/elasticsearch:7.10.2
 
 RUN elasticsearch-plugin install https://github.com/WorksApplications/elasticsearch-sudachi/releases/download/v3.1.0/analysis-sudachi-7.10.2-3.1.0.zip
 
