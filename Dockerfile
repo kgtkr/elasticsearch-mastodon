@@ -10,4 +10,4 @@ RUN elasticsearch-plugin install https://github.com/WorksApplications/elasticsea
 
 RUN mkdir -p /usr/share/elasticsearch/config/sudachi/
 COPY --chown=root:elasticsearch --from=sudachi /opt/system_full.dic /usr/share/elasticsearch/config/sudachi/
-COPY --chown=root:elasticsearch sudachi.json /etc/elasticsearch/
+COPY --chown=root:elasticsearch sudachi.json /usr/share/elasticsearch/config/sudachi/
