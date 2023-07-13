@@ -10,6 +10,7 @@ RUN git clone https://github.com/WorksApplications/Sudachi.git /opt/Sudachi && \
 
 FROM docker.elastic.co/elasticsearch/elasticsearch:7.10.2
 
+RUN elasticsearch-plugin install analysis-icu
 RUN elasticsearch-plugin install https://github.com/WorksApplications/elasticsearch-sudachi/releases/download/v3.1.0/elasticsearch-7.10.2-analysis-sudachi-3.1.0.zip
 
 RUN mkdir -p /usr/share/elasticsearch/config/sudachi/
